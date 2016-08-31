@@ -13,7 +13,6 @@ using namespace std;
 
 //function
 double F(int x){
-    
     double function = -(x*x) -10;
     return function;
 }
@@ -22,9 +21,7 @@ void findMaxofFunction(int a, int b, int count){
     double x,y, f;
     double highest;
     double z;
-   
-  
-     
+    
     z = (-1 + sqrt(5))/2;
     y = a+ z*(b-a);
     x = a+ z*(y-a);
@@ -33,23 +30,18 @@ void findMaxofFunction(int a, int b, int count){
         if(F(x)< F(y)){
             a = x;
             std::cout<< x<<","<< y<<std::endl;
-            
         }else{
             b = y;
         }
-        
-     y = a+ z*(b-a);
+    y = a+ z*(b-a);
     x = a+ z*(y-a);
-    
     }
-    
     std::cout<< x<<","<< y<<std::endl;
 }
 /*
  * 
  */
 int main(int argc, char** argv) {
-
     findMaxofFunction(0,3,0);
     return 0;
 }
